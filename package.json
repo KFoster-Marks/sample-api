@@ -1,0 +1,11 @@
+{
+  "name": "sample-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha.js"
+  },
+  "author": "Kristen Foster-Marks",
+  "license": "ISC"
+}
