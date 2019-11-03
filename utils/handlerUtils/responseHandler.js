@@ -2,11 +2,11 @@ class ResponseHandler {
     async handleJSONResponse(req, res) {
         try {
             if (req.error) {
-                sendError(req.error, res);
+                res.status(500).json(err);
                 return;
             } else if (!req.promise) {
                 let error = new Error('Missing "req.promise"');
-                sendError(error, res);
+                res.status(500).json(err);
                 return;
             }
 

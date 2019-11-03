@@ -14,4 +14,14 @@ module.exports = (app) => {
             ),
             responseHandler.handleJSONResponse
     );
+
+    app.route(`/v${version}/sample`)
+        .post(
+            requestHandler.createHandler(
+                controller,
+                'addSample',
+                ['data']
+            ),
+            responseHandler.handleJSONResponse
+    );
 };
