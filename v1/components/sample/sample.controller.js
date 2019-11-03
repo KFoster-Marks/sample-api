@@ -8,7 +8,6 @@ class Controller {
     }
 
     addSample(data) {
-        console.log(data);
         return data;
     }
 }

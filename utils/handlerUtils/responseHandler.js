@@ -6,7 +6,7 @@ class ResponseHandler {
                 return;
             } else if (!req.promise) {
                 let error = new Error('Missing "req.promise"');
-                res.status(500).json(err);
+                res.status(500).json(error);
                 return;
             }
 

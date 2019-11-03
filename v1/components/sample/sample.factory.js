@@ -6,6 +6,10 @@ class Factory {
     getSample(text) {
         return this.dal.getSample(text);
     }
+
+    addSample(data) {
+        return this.dal.addSample(data);
+    }
 }
 
 module.exports = Factory;
