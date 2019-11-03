@@ -3,8 +3,8 @@ class Factory {
         this.dal = dal;
     }
 
-    getSample() {
-        return this.dal.getSample();
+    getSample(text) {
+        return this.dal.getSample(text);
     }
 }
 

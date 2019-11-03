@@ -1,11 +1,10 @@
 class Controller {
     constructor(factory) {
         this.factory = factory;
-        this.getSample = this.getSample.bind(this);
     }
 
-    getSample() {
-        return this.factory.getSample();
+    getSample(text) {
+        return this.factory.getSample(text);
     }
 }
 

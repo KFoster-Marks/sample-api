@@ -1,8 +1,6 @@
 class Dal {
-    getSample() {
-        const message = 'Enjoy your sample!';
-        console.log(message);
-        return message;
+    getSample(text) {
+        return `The param is '${text}'`;
     }
 }
 
