@@ -7,6 +7,15 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+const getRestRouteFilePaths = (filePattern) => {
+    let routeFilePaths = [];
+
+    let files = glob.sync(filePattern);
+    routeFilePaths = _.union(routeFilePaths, files);
+
+    return routeFilePaths;
+}
+
 const initializeApplication = () => {
     console.log('Initializing the express application.');
 
@@ -54,15 +63,6 @@ const startApp = () => {
 
 let server;
 let app = initializeApplication();
-
-function getRestRouteFilePaths(filePattern) {
-    let routeFilePaths = [];
-
-    let files = glob.sync(filePattern);
-    routeFilePaths = _.union(routeFilePaths, files);
-
-    return routeFilePaths;
-}
 
 module.exports = {
     startApp,
